@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>recreation — scalejoy.org</title>
+  <meta name="description" content="recreation. play. pause. resolve." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ── 1: Hero ── -->
+  <section id="hero">
+    <img class="logo" src="https://ik.imagekit.io/awnp/final%20outputs/025%20rec_re_a_tion%20-%202.png?updatedAt=1769891577345" alt="recreation" />
+    <span class="corner-label">scalejoy.org</span>
+  </section>
+
+  <!-- ── 2: What ── -->
+  <section id="what">
+    <div class="text-block">
+      <h2 class="reveal">building the infrastructure<br>for thriving</h2>
+      <p class="reveal">
+        Modern life takes place within fully built-out systems of
+        distraction and a loneliness epidemic.
+      </p>
+      <p class="reveal">
+        rec·re·a·tion is a
+        nonprofit organization and a social sculpture: an experiment to
+        build scalable structures for individual flourishing. In short,
+        to scale joy.
+      </p>
+    </div>
+    <img
+      class="section-art what-art reveal"
+      src="https://ik.imagekit.io/awnp/final%20outputs/025%20rec_re_a_tion%20-%205.png?updatedAt=1769891577183"
+      alt=""
+      aria-hidden="true"
+    />
+    <span class="corner-label">what</span>
+  </section>
+
+  <!-- ── 3: Pilot ── -->
+  <section id="pilot">
+    <img
+      class="section-art pilot-art reveal"
+      src="https://ik.imagekit.io/awnp/final%20outputs/025%20rec_re_a_tion%20-%201.jpeg?updatedAt=1769891578495"
+      alt=""
+      aria-hidden="true"
+    />
+    <div class="pilot-content">
+      <div class="reveal pilot-label">chicago · 2025</div>
+      <h3 class="reveal">now running our first pilot</h3>
+      <p class="reveal">
+        Weekly gatherings take one of three forms: <span class="token-play">play</span> (sharing of
+        personal pursuits), <span class="token-pause">pause</span> (reflection), and <span class="token-resolve">resolve</span>
+        (intention-setting).
+      </p>
+      <p class="reveal">
+        Grounded in Aristotelian friendships of
+        virtue and bell hook's definition of love, our belief is that a
+        sense of both purpose and belonging are critical to thriving.
+      </p>
+    </div>
+    <span class="corner-label">pilot</span>
+  </section>
+
+  <!-- ── 4: Connect ── -->
+  <section id="connect">
+    <div class="connect-inner">
+      <p class="reveal connect-eyebrow">stay in touch</p>
+      <a class="reveal email-link" href="mailto:hello@scalejoy.org?subject=hi from scalejoy.org">
+        hello@scalejoy.org
+      </a>
+    </div>
+
+    <div class="org-details reveal">
+      <strong>recreation foundation</strong>
+      <span class="dot-sep">·</span> 501(c)(3) nonprofit
+      <span class="dot-sep">·</span> ein: 33-1567485<br />
+      1512 florence ave, evanston, il 60201
+      <span class="dot-sep">·</span> est. 2024
+    </div>
+
+    <div class="accent-dots reveal" aria-hidden="true">
+      <span style="background:#4ECFED"></span>
+      <span style="background:#5CB85C"></span>
+      <span style="background:#E8738A"></span>
+    </div>
+
+    <span class="corner-label">connect</span>
+  </section>
+
+  <script>
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      }),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
