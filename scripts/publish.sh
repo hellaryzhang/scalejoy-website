@@ -23,9 +23,14 @@ else
   git push -u origin main
 fi
 
+# Ensure GitHub Pages is enabled from main branch root.
+gh api -X POST "repos/$(gh repo view --json owner,name -q '.owner.login + \"/\" + .name')/pages" \
+  -f 'source[branch]=main' \
+  -f 'source[path]=/' >/dev/null 2>&1 || true
+
 echo ""
 echo "Repository published."
 echo "Next:"
-echo "1) Open repo Settings -> Pages and set Source to 'GitHub Actions'."
+echo "1) In Settings -> Pages, confirm Source is 'Deploy from a branch' (main / root)."
 echo "2) Confirm CNAME is scalejoy.org."
 echo "3) Configure DNS records listed in DEPLOYMENT.md."
